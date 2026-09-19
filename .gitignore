@@ -1,0 +1,24 @@
+# Build
+bin/
+obj/
+*.user
+
+# Secrets et configuration locale
+appsettings.*.local.json
+*.env
+
+# Données personnelles — ne jamais publier
+seed/reprise.json
+sources/
+
+# Archives de travail
+tools/*.zip
+tools/rncp_codes.txt
+
+# Sorties de publication
+publish/
+publish-autonome/
+
+# Sauvegardes de base : donnees personnelles de candidats
+sauvegardes/
+dossiers-candidats/

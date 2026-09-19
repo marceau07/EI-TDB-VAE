@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/EiVae.Api/EiVae.Api.csproj" />
+    <Project Path="src/EiVae.Domain/EiVae.Domain.csproj" />
+    <Project Path="src/EiVae.Infrastructure/EiVae.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/EiVae.Tests/EiVae.Tests.csproj" />
+  </Folder>
+</Solution>

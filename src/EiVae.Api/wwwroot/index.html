@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pilotage VAE — EI Groupe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="app">
+  <aside class="rail">
+    <div class="brand">
+      <div class="brand-mark"><b>ei</b></div>
+      <div class="brand-txt"><strong>Pilotage VAE</strong><span>EI Groupe</span></div>
+    </div>
+    <nav id="nav"></nav>
+    <div class="rail-foot">
+      <span id="railInfo">Chargement…</span>
+      <button class="btn ghost" id="themeBtn" style="margin-top:8px;padding:3px 8px;font-size:11px">Thème auto</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="topbar-row">
+        <div>
+          <h1 id="vTitle">Tableau de bord direction</h1>
+          <p class="sub" id="vSub"></p>
+        </div>
+        <div class="topbar-actions" id="vActions"></div>
+      </div>
+      <div class="filters" id="filters">
+        <label for="fPeriode">Période</label>
+        <select class="f" id="fPeriode">
+          <option value="">Depuis l'origine</option>
+          <option value="12">12 derniers mois</option>
+          <option value="6">6 derniers mois</option>
+          <option value="3">3 derniers mois</option>
+        </select>
+        <label for="fAap">AAP</label><select class="f" id="fAap"></select>
+        <label for="fCert">Certification</label><select class="f" id="fCert"></select>
+        <label for="fAcc">Accompagnateur</label><select class="f" id="fAcc"></select>
+        <label for="fFin">Financement</label><select class="f" id="fFin"></select>
+        <label for="fTerr">Territoire</label><select class="f" id="fTerr"></select>
+        <label for="fEtape">Étape</label><select class="f" id="fEtape"></select>
+        <input class="f" id="fQ" type="search" placeholder="Rechercher un candidat…">
+        <button class="btn ghost" id="resetF">Réinitialiser</button>
+        <span class="chip c-neutral" id="fCount">—</span>
+      </div>
+    </header>
+
+    <section class="view on" id="vue"></section>
+  </main>
+</div>
+
+<div class="scrim" id="scrim"></div>
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Fiche"></aside>
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modal-box" id="modalBox"></div></div>
+<div class="toast-zone" id="toasts" aria-live="polite"></div>
+
+<script src="app.js"></script>
+<script src="views-pilotage.js"></script>
+<script src="views-saisie.js"></script>
+<script src="views-integrations.js"></script>
+<script>demarrer();</script>
+</body>
+</html>
